@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "KekCesitleri";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<SakaryaBufe.Kekler>
+
+
+<script defer src="/Content/js/jquery.flexslider.js"></script>
+<link rel="stylesheet" href="/Content/css/flexslider1.css" type="text/css" media="screen" />
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+
+
+<div class="gallery">
+    <div class="container">
+        <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+            <h3 class="title">Kek<span> Cesitleri </span></h3>
+
+        </div>
+        <div class="gallery-info">
+            @foreach (var kekler in Model)
+            {
+
+            <div class="col-md-3 gallery-grid wow flipInY animated" data-wow-delay=".5s">
+                <a href="Cikolatalar/CikolataCesitleri/ }"> <img src="@kekler.Resim" class="img-responsive" alt="" /></a>
+                <div class="gallery-text simpleCart_shelfItem">
+                    <h1><a class="name" href="">@kekler.Baslik</a></h1>
+
+                    <br> <h5><a class="name" href="">@kekler.Fiyat</a></h5>
+                    <br><br>   <button class="btn btn-warning">  <a href="/Kekler/SatinAl/@kekler.id" class="add-cart item_add">SATIN AL</a></button>
+                </div>
+
+
+            </div>
+
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+

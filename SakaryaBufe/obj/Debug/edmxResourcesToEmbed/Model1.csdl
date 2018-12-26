@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SakaryaBufeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bisküviler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Bisküviler" FromRole="Bisküviler" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Cikolatalar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Çikolatalar" FromRole="Cikolatalar" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Cipsler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Cipsler" FromRole="Cipsler" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Icecekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Icecekler" FromRole="Icecekler" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriAdi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="resimYol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bisküviler" Relationship="Self.FK_Kategoriler_Bisküviler" FromRole="Kategoriler" ToRole="Bisküviler" />
+    <NavigationProperty Name="Cikolatalars" Relationship="Self.FK_Kategoriler_Çikolatalar" FromRole="Kategoriler" ToRole="Cikolatalar" />
+    <NavigationProperty Name="Cipslers" Relationship="Self.FK_Kategoriler_Cipsler" FromRole="Kategoriler" ToRole="Cipsler" />
+    <NavigationProperty Name="Iceceklers" Relationship="Self.FK_Kategoriler_Icecekler" FromRole="Kategoriler" ToRole="Icecekler" />
+    <NavigationProperty Name="Keklers" Relationship="Self.FK_Kategoriler_Kekler" FromRole="Kategoriler" ToRole="Kekler" />
+    <NavigationProperty Name="Krakerlers" Relationship="Self.FK_Kategoriler_Krakerler" FromRole="Kategoriler" ToRole="Krakerler" />
+    <NavigationProperty Name="Oyuncaklars" Relationship="Self.FK_Kategoriler_Oyuncaklar" FromRole="Kategoriler" ToRole="Oyuncaklar" />
+  </EntityType>
+  <EntityType Name="Kekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Kekler" FromRole="Kekler" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Krakerler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Krakerler" FromRole="Krakerler" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Eposta" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Adres" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="KullaniciGiri">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Eposta" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Manset">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mbaslik" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Maciklama" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="MresimYol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MesajBox">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mesaj_Siparis" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Mesaj" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Oyuncaklar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Kategoriler" Relationship="Self.FK_Kategoriler_Oyuncaklar" FromRole="Oyuncaklar" ToRole="Kategoriler" />
+  </EntityType>
+  <EntityType Name="Resimler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimYolu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ResimUrun" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Resimler1" Relationship="Self.FK_Resimler_Resimler" FromRole="Resimler" ToRole="Resimler1" />
+    <NavigationProperty Name="Resimler2" Relationship="Self.FK_Resimler_Resimler" FromRole="Resimler1" ToRole="Resimler" />
+  </EntityType>
+  <EntityType Name="Sakizlar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kategoriId" Type="Int32" Nullable="false" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Kategoriler_Bisküviler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Bisküviler" Type="Self.Bisküviler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bisküviler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Çikolatalar">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Cikolatalar" Type="Self.Cikolatalar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cikolatalar">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Cipsler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Cipsler" Type="Self.Cipsler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cipsler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Icecekler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Icecekler" Type="Self.Icecekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Icecekler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Kekler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Kekler" Type="Self.Kekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Kekler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Krakerler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Krakerler" Type="Self.Krakerler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Krakerler">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kategoriler_Oyuncaklar">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="1" />
+    <End Role="Oyuncaklar" Type="Self.Oyuncaklar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Oyuncaklar">
+        <PropertyRef Name="kategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resimler_Resimler">
+    <End Role="Resimler" Type="Self.Resimler" Multiplicity="1" />
+    <End Role="Resimler1" Type="Self.Resimler" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Resimler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Resimler1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SakaryaBufeEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Bisküviler" EntityType="Self.Bisküviler" />
+    <EntitySet Name="Cikolatalars" EntityType="Self.Cikolatalar" />
+    <EntitySet Name="Cipslers" EntityType="Self.Cipsler" />
+    <EntitySet Name="Iceceklers" EntityType="Self.Icecekler" />
+    <EntitySet Name="Kategorilers" EntityType="Self.Kategoriler" />
+    <EntitySet Name="Keklers" EntityType="Self.Kekler" />
+    <EntitySet Name="Krakerlers" EntityType="Self.Krakerler" />
+    <EntitySet Name="Kullanicis" EntityType="Self.Kullanici" />
+    <EntitySet Name="KullaniciGiris" EntityType="Self.KullaniciGiri" />
+    <EntitySet Name="Mansets" EntityType="Self.Manset" />
+    <EntitySet Name="MesajBoxes" EntityType="Self.MesajBox" />
+    <EntitySet Name="Oyuncaklars" EntityType="Self.Oyuncaklar" />
+    <EntitySet Name="Resimlers" EntityType="Self.Resimler" />
+    <EntitySet Name="Sakizlars" EntityType="Self.Sakizlar" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Kategoriler_Bisküviler" Association="Self.FK_Kategoriler_Bisküviler">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Bisküviler" EntitySet="Bisküviler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Çikolatalar" Association="Self.FK_Kategoriler_Çikolatalar">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Cikolatalar" EntitySet="Cikolatalars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Cipsler" Association="Self.FK_Kategoriler_Cipsler">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Cipsler" EntitySet="Cipslers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Icecekler" Association="Self.FK_Kategoriler_Icecekler">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Icecekler" EntitySet="Iceceklers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Kekler" Association="Self.FK_Kategoriler_Kekler">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Kekler" EntitySet="Keklers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Krakerler" Association="Self.FK_Kategoriler_Krakerler">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Krakerler" EntitySet="Krakerlers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kategoriler_Oyuncaklar" Association="Self.FK_Kategoriler_Oyuncaklar">
+      <End Role="Kategoriler" EntitySet="Kategorilers" />
+      <End Role="Oyuncaklar" EntitySet="Oyuncaklars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resimler_Resimler" Association="Self.FK_Resimler_Resimler">
+      <End Role="Resimler" EntitySet="Resimlers" />
+      <End Role="Resimler1" EntitySet="Resimlers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

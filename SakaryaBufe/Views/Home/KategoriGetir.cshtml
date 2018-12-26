@@ -1,0 +1,108 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+@model IEnumerable<SakaryaBufe.Kategoriler>
+
+@*   Database den veri alma işlemi  *@
+
+<div class="gallery">
+    <div class="container">
+        <div class="title-info wow fadeInUp animated" data-wow-delay=".5s">
+            <h3 class="title">Kategoriler<span> </span></h3>
+
+        </div>
+        <div class="gallery-info">
+            @foreach (var kategoriler in Model)
+            {
+
+                if (kategoriler.id == 1)
+                {
+                    <div class="col-md-3 gallery-grid wow flipInY animated" data-wow-delay=".5s">
+                        <a href="Cikolatalar/CikolataCesitleri/ }"> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 2)
+                {
+                    <div class="col-md-3 gallery-grid gallery-grid1 wow flipInY animated" data-wow-delay=".7s">
+                        <a href="Kekler/KekCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 3)
+                {
+                    <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
+                        <a href="Bisküviler/BisküviCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 4)
+                {
+                    <div class="col-md-3 gallery-grid wow flipInY animated" data-wow-delay="1.1s">
+                        <a href="Krakerler/KrakerCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 5)
+                {
+                    <div class="col-md-3 gallery-grid wow flipInY animated" data-wow-delay=".5s">
+                        <a href="Sakizlar/SakizCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 6)
+                {
+                    <div class="col-md-3 gallery-grid gallery-grid1 wow flipInY animated" data-wow-delay=".7s">
+                        <a href="Cipsler/CipsCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 7)
+                {
+                    <div class="col-md-3 gallery-grid gallery-grid2 wow flipInY animated" data-wow-delay=".9s">
+                        <a href="Icecekler/IcecekCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else if (kategoriler.id == 8)
+                {
+                    <div class="col-md-3 gallery-grid wow flipInY animated" data-wow-delay="1.1s">
+                        <a href="Oyuncaklar/OyuncakCesitleri/ } "> <img src="@kategoriler.resimYol" class="img-responsive" alt="" /></a>
+                        <div class="gallery-text simpleCart_shelfItem">
+                            <br /><br /> <h1><a class="name" href="">@kategoriler.kategoriAdi</a></h1>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p> HATA MEYDANA GELDİ. </p>
+                }
+
+
+            }
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<SakaryaBufe.Kategoriler>
+
+@*   Database den veri alma işlemi  *@
+
+
+@{ Html.RenderAction("Slider");}
+@{ Html.RenderAction("KategoriGetir");}
+
+
+

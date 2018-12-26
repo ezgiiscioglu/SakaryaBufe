@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d98f44f839734ecf85ea8da34d4283b4" Name="Diagram1">
+        <EntityTypeShape EntityType="SakaryaBufeModel.Bisküviler" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Cikolatalar" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Cipsler" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Icecekler" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Kategoriler" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Kekler" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Krakerler" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Kullanici" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.KullaniciGiri" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Manset" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.MesajBox" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Oyuncaklar" Width="1.5" PointX="3" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Resimler" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.Sakizlar" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SakaryaBufeModel.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Bisküviler" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Çikolatalar" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Cipsler" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Icecekler" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Kekler" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Krakerler" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Kategoriler_Oyuncaklar" ManuallyRouted="false" />
+        <AssociationConnector Association="SakaryaBufeModel.FK_Resimler_Resimler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
